@@ -1,29 +1,3 @@
-<style>
-    .mycheck {
-    box-sizing: border-box !important;
-    border: 1px solid black !important;
-    border-radius: 2px !important;
-    background-color: rgb(238, 238, 238) !important;
-    height: 1.5rem !important;
-    width: 1.5rem !important;
-    display: flex !important;
-    justify-content: center !important;
-    padding-left: 1.5rem !important;
-    padding-bottom: 5px;
-    flex: 0 0 auto !important;
-    margin-bottom: 11px;
-    max-width: 32px;
-    }
-    .goa-checkbox-label{
-      padding-left: 2.5rem !important;
-    }
-    .goa-checkbox-text {
-      padding-left: 2.5rem !important;
-      user-select: none;
-      font-weight: 400;
-  }
-</style>
-
 <main>
   <form [formGroup]="basicForm">
     <div>
@@ -34,7 +8,6 @@
           goaValue
           name="items"
           text="Item 1"
-          class="mycheck"
           [formControl]="reactiveFormCtrl"
           [value]="reactiveFormCtrl.value"
         ></goa-checkbox>
@@ -44,8 +17,7 @@
           text="Item 2"
           [formControl]="reactiveFormCtrl"
           [attr.disabled]="true"
-          class="mycheck"
-        ></goa-checkbox>
+          ></goa-checkbox>
         <goa-divider mt="m" mb="m"></goa-divider>
         <h2>Reactive Binding - checked</h2>
         <div>Binding: {{ testFormCtrl.value }}</div>
@@ -54,13 +26,11 @@
           name="items"
           text="Item 3"
           [formControl]="testFormCtrl"
-          class="mycheck"
-        ></goa-checkbox>
+          ></goa-checkbox>
         <div>Binding: {{ test1FormCtrl.value }}</div>
         <button
           (click)="test1FormCtrl.setValue('checked')"
-          style="margin:10px 20px"
-        >
+         >
           Set Value to checked
         </button>
         <goa-checkbox
@@ -68,7 +38,6 @@
           name="items"
           text="check4"
           [formControl]="test1FormCtrl"
-          class="mycheck"
           mt="m"
           mb="xs"
           ml="xl"
@@ -81,7 +50,6 @@
           value="10"
           [checked]="checkbox3Checked"
           (_change)="onChange3()"
-          class="error"
           error
         ></goa-checkbox>
 
@@ -92,7 +60,7 @@
           name="items"
           text="Checkbox with description"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit.S"
-          class="mycheck"
+          
         >
         </goa-checkbox>
         <br /><br /><br /><br /><br /><br />
@@ -108,7 +76,7 @@
           mb="xs"
           ml="xl"
           mr="2xl"
-          class="mycheck"
+          
         >
         </goa-checkbox>
       </goa-container>
